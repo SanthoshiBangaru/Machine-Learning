@@ -1,0 +1,82 @@
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #f6c1d8 0%,
+        #c9b6f2 50%,
+        #a8c9f5 100%
+    );
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px) translateX(0px); }
+    50%  { transform: translateY(-30px) translateX(20px); }
+    100% { transform: translateY(0px) translateX(0px); }
+}
+
+.stApp::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    top: 15%;
+    left: 8%;
+    animation: float 10s ease-in-out infinite;
+}
+
+.stApp::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    bottom: 10%;
+    right: 6%;
+    animation: float 18s ease-in-out infinite;
+}
+
+.card{
+    background: linear-gradient(
+        135deg,
+        #fee7f1,
+        #dcf3ff
+    );
+    padding: 26px;
+    border-radius: 18px;
+    box-shadow: 
+        0 10px 26px rgba(255, 150, 200, 0.25);
+    margin-bottom: 25px;
+}
+
+h1, h2, h3{
+    color: #0f172a;
+}
+
+/* Metric boxes */
+div[data-testid = "metric-container"]{
+    background-color: #f8fafc;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.prediction-box {
+    background: linear-gradient(
+        135deg,
+        #ede9fe,
+        #ddd6fe
+    );
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5b21b6;
+    margin-top: 15px;
+}
